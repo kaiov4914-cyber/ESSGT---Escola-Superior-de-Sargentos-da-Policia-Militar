@@ -1,170 +1,75 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Curso Online - Escola Superior de Sargentos PMSP</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curso Online – Editável</title>
+
   <style>
-    :root{--primary:#002b5c;--accent:#0b71c1;--bg:#f4f6f8;--card:#ffffff}
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:var(--bg); color:#111}
-    header{background:var(--primary); color:#fff;padding:20px 16px}
-    .wrap{max-width:1100px;margin:20px auto;padding:16px}
-    .brand{display:flex;gap:12px;align-items:center}
-    .brand .title{font-size:20px;font-weight:700}
-
-    nav{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap}
-    nav a{color:#fff;text-decoration:none;padding:8px 12px;border-radius:6px;background:rgba(255,255,255,0.06)}
-
-    main{display:grid;grid-template-columns:1fr 320px;gap:20px}
-    @media (max-width:900px){main{grid-template-columns:1fr}}
-
-    .card{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(10,10,10,0.06)}
-    .aula{border-left:4px solid var(--primary);padding:12px;margin-bottom:14px;border-radius:6px;background:linear-gradient(180deg,#fff,#fbfdff)}
-    .aula h3{margin:0 0 8px 0;color:var(--primary)}
-    .aula p{margin:0 0 8px 0}
-
-    .lesson-list{list-style:none;padding:0;margin:0}
-    .lesson-list li{margin-bottom:10px}
-    .btn{display:inline-block;padding:8px 12px;border-radius:8px;text-decoration:none;border:0;cursor:pointer}
-    .btn-primary{background:var(--accent);color:#fff}
-    .btn-outline{background:transparent;border:1px solid #ddd}
-
-    /* small helper for expanded lesson */
-    .lesson-content{display:none;padding-top:8px}
-    .lesson-open .lesson-content{display:block}
-
-    footer{margin-top:24px;padding:12px;text-align:center;color:#666}
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f0f0f0; }
+    header { background: #002b5c; color: white; padding: 20px; text-align: center; }
+    .container { width: 90%; max-width: 900px; margin: 20px auto; background: white; padding: 20px; border-radius: 8px; }
+    .aula { border: 1px solid #ccc; padding: 15px; border-radius: 8px; margin-bottom: 15px; background: #fafafa; }
+    h2, h3 { color: #002b5c; }
+    button { padding: 8px 12px; border: none; background: #002b5c; color: white; border-radius: 6px; cursor: pointer; }
+    .conteudo { display: none; margin-top: 10px; }
   </style>
 </head>
+
 <body>
   <header>
-    <div class="wrap">
-      <div class="brand">
-        <div>
-          <!-- Você pode substituir por imagem do brasão -->
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-            <rect width="24" height="24" rx="4" fill="#fff" opacity="0.06"/>
-            <path d="M12 3v18" stroke="#fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-            <circle cx="12" cy="8" r="1.6" fill="#fff"/>
-          </svg>
-        </div>
-        <div>
-          <div class="title">Curso Online - Escola Superior de Sargentos PMSP</div>
-          <div style="font-size:13px;opacity:.9">6 aulas — Conteúdo estruturado e responsivo</div>
-        </div>
-      </div>
-
-      <nav aria-label="menu do curso">
-        <a href="#aulas">Aulas</a>
-        <a href="#materiais">Materiais</a>
-        <a href="#contato">Contato</a>
-      </nav>
-    </div>
+    <h1>Curso Online – PMSP</h1>
   </header>
 
-  <div class="wrap">
-    <main>
-      <section class="card" id="aulas">
-        <h2>Conteúdo do Curso (6 Aulas)</h2>
+  <div class="container">
+    <h2>Aulas do Curso</h2>
 
-        <div class="aula" id="aula1">
-          <h3>Aula 1 — Fundamentos da Atividade Policial Militar</h3>
-          <p class="summary">Introdução à doutrina, legalidade, proporcionalidade e atuação da PMSP.</p>
-          <button class="btn btn-outline" onclick="toggleLesson(1)">Abrir/Fechar conteúdo</button>
-          <div class="lesson-content" id="content-1">
-            <p><strong>Objetivos:</strong> compreender papel institucional, aplicar princípios no planejamento.</p>
-            <ul>
-              <li>História e evolução da PMSP</li>
-              <li>Estrutura organizacional</li>
-              <li>Princípios de atuação</li>
-            </ul>
-          </div>
-        </div>
+    <!-- MODELO DE AULA (COPIE E COLE PARA ADICIONAR MAIS) -->
 
-        <div class="aula" id="aula2">
-          <h3>Aula 2 — Liderança e Gestão de Equipes</h3>
-          <p class="summary">Liderança tática, tomada de decisão e gestão de conflitos.</p>
-          <button class="btn btn-outline" onclick="toggleLesson(2)">Abrir/Fechar conteúdo</button>
-          <div class="lesson-content" id="content-2">
-            <p><strong>Atividades práticas:</strong> simulações de comando, feedback estruturado.</p>
-          </div>
-        </div>
+    <div class="aula">
+      <h3>Aula 1 – Título da Aula</h3>
+      <p>Resumo curto da aula.</p>
+      <button onclick="toggleConteudo(this)">Mostrar / Ocultar Conteúdo</button>
 
-        <div class="aula" id="aula3">
-          <h3>Aula 3 — Legislação Aplicada</h3>
-          <p class="summary">CP, CPP, Leis especiais e uso legal da força.</p>
-          <button class="btn btn-outline" onclick="toggleLesson(3)">Abrir/Fechar conteúdo</button>
-          <div class="lesson-content" id="content-3">
-            <p><strong>Casos:</strong> estudo de casos jurídicos envolvendo atuação policial.</p>
-          </div>
-        </div>
-
-        <div class="aula" id="aula4">
-          <h3>Aula 4 — Técnicas Operacionais Policiais</h3>
-          <p class="summary">Abordagem, busca pessoal e protocolos operacionais.</p>
-          <button class="btn btn-outline" onclick="toggleLesson(4)">Abrir/Fechar conteúdo</button>
-          <div class="lesson-content" id="content-4">
-            <p><strong>Prática:</strong> exercícios táticos com cenários reais e checklist de segurança.</p>
-          </div>
-        </div>
-
-        <div class="aula" id="aula5">
-          <h3>Aula 5 — Logística Operacional</h3>
-          <p class="summary">Gestão de viaturas, munição, armamento e materiais.</p>
-          <button class="btn btn-outline" onclick="toggleLesson(5)">Abrir/Fechar conteúdo</button>
-          <div class="lesson-content" id="content-5">
-            <p><strong>Exercício prático:</strong> montar plano logístico para operação.</p>
-          </div>
-        </div>
-
-        <div class="aula" id="aula6">
-          <h3>Aula 6 — Gerenciamento de Crises</h3>
-          <p class="summary">Protocolos para situações críticas, negociação e tomada de decisão.</p>
-          <button class="btn btn-outline" onclick="toggleLesson(6)">Abrir/Fechar conteúdo</button>
-          <div class="lesson-content" id="content-6">
-            <p><strong>Simulação:</strong> cenários com múltiplas vítimas e coordenação interagências.</p>
-          </div>
-        </div>
-
-      </section>
-
-      <aside class="card" id="materiais">
-        <h3>Materiais & Ferramentas</h3>
-        <p>Adicione recursos aqui: PDFs, vídeos, slides e avaliações.</p>
-        <ul class="lesson-list">
-          <li><button class="btn btn-primary" onclick="downloadSample()">Baixar material de exemplo (PDF)</button></li>
-          <li><a class="btn" href="#contato">Solicitar certificação</a></li>
+      <div class="conteudo">
+        <p><strong>Objetivos:</strong></p>
+        <ul>
+          <li>Objetivo 1</li>
+          <li>Objetivo 2</li>
         </ul>
 
-        <hr style="margin:14px 0" />
-        <h4>Configurações</h4>
-        <p style="font-size:13px;color:#444">Este site é estático: para salvar progresso dos alunos, configure um backend (Firebase, Supabase ou outro).</p>
-      </aside>
-    </main>
+        <p><strong>Conteúdo detalhado:</strong></p>
+        <p>Escreva aqui o conteúdo completo da aula.</p>
+      </div>
+    </div>
 
-    <footer class="card" id="contato">
-      <p>Desenvolvido para uso da Escola Superior de Sargentos — Personalize com logotipos e links de autenticação.</p>
-      <small>© PMSP — Curso Online</small>
-    </footer>
+    <!-- COPIE DAQUI PARA BAIXO PARA ADICIONAR NOVAS AULAS -->
+
+    <div class="aula">
+      <h3>Aula 2 – Título da Aula</h3>
+      <p>Resumo curto da aula.</p>
+      <button onclick="toggleConteudo(this)">Mostrar / Ocultar Conteúdo</button>
+
+      <div class="conteudo">
+        <p><strong>Objetivos:</strong></p>
+        <ul>
+          <li>Objetivo 1</li>
+          <li>Objetivo 2</li>
+        </ul>
+
+        <p><strong>Conteúdo detalhado:</strong></p>
+        <p>Descrição detalhada aqui.</p>
+      </div>
+    </div>
+
+    <!-- FIM DO MODELO -->
+
   </div>
 
   <script>
-    function toggleLesson(n){
-      const el = document.getElementById('content-'+n);
-      if(!el) return;
-      el.parentElement.classList.toggle('lesson-open');
-    }
-
-    function downloadSample(){
-      // exemplo simples: cria e baixa um arquivo de texto como placeholder
-      const content = 'Material de exemplo do curso - substitua por PDF real.';
-      const blob = new Blob([content], {type: 'text/plain'});
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url; a.download = 'material-exemplo.txt';
-      document.body.appendChild(a); a.click(); a.remove();
-      URL.revokeObjectURL(url);
+    function toggleConteudo(btn) {
+      const box = btn.nextElementSibling;
+      box.style.display = box.style.display === 'block' ? 'none' : 'block';
     }
   </script>
 </body>
